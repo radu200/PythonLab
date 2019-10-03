@@ -10,16 +10,55 @@ print("years require to double", 72/5)
 
 
 #6 
-Initialbalance = int(10000)
-Count = int(0)
 
-while(Initialbalance < 20000):
- Initialbalance = Initialbalance * 1.05
- count +=1
+def double_balance (balance):
+    count = 0
+    finalBalance = balance * 2
+    while(balance < finalBalance):
+        balance = balance * 1.05
+        count += 1
+    return count
 
-print(str(count) + " years")
+print(double_balance(10000))
+
+class DoubleBalance:
+   def __init__(this,balance):
+    this.balance = balance
+
+   def double(this):
+     count = 0
+     finalBalance = this.balance * 2
+     while(this.balance < finalBalance):
+        this.balance = this.balance * 1.05
+        count += 1
+     return count
+
+balance1 = DoubleBalance(50000).double()
+print(balance1)
 
 
 
 #6.1
-print(1+2+3+4+5+6+7+8+9+10)
+def sum_all (num) :
+    sum = 0 
+    for x in num :
+        sum += x
+    return sum
+
+print(sum_all([1,2,3,4,5,6,7,8,9,10]))
+
+#class version
+class SumAll:
+  def __init__(this, num):
+   this.num = num
+  
+  def sum(this):
+      sum = 0 
+      for x in this.num:
+          sum += x
+      return sum
+
+num1 = SumAll([1,2,3,4,5,6,7,8,9,20]).sum()
+print(num1)
+
+
